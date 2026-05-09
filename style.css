@@ -76,7 +76,7 @@ nav1 {
   background-color: #4c4344;
   bottom: 0;
   left: 0;
-  transition: all ease 500ms;
+  transition: 0.4s ease;
  
   
 
@@ -126,17 +126,19 @@ nav4 {
 }.image{
     width: 600px;
     height: 700px;
-    background-color:#F2E8E2;
-    border-radius: 50%;
-    transform: rotate(20deg) ;
+    /* background-color:#F2E8E2; */
+    border: 1px solid #4c4344;
+    border-radius: 70% 30% / 50% 50%;
+    /* transform: rotate(20deg) ; */
     /* border: 1px solid #4c4344; */
     overflow: hidden;
+    
 }
 
 .hero .image img{
    height: 100%;
    width: 100%;
-   transform: rotate(-15deg) scale(1);
+   
   object-fit: cover;
   mix-blend-mode: multiply;
 }
@@ -160,14 +162,14 @@ nav4 {
 }
 
 .book-btn {
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 60px;
     display: inline-block;
     background-color: #4c4344;
     color: #fcfaf8;
-    padding: 24px;
+    padding: 15px 15px;
      /* border: 1px solid #fcfaf8; */
-   border-radius: 10px;
+   border-radius: 2rem;
    cursor: pointer;
    position: relative;
    width: max-content;
@@ -177,10 +179,16 @@ nav4 {
 
   
 }
+
 .book-btn span{
   position: relative;
   z-index: 2;
    transition: color 500ms ease;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+   text-transform: uppercase;
 }
 .book-btn::after{
   content: '';
@@ -192,37 +200,51 @@ nav4 {
   left: 50%;
   
   transform: translate(-50%, -50%) scale(0);
-  transition: 1000ms ;
- 
-
-
-   border-radius: 50%;
-   border: 2px solid #4c4344;
-   cursor: pointer;
- 
- 
-   z-index: 1;
-
-
-    
-
+  transition: 0.4s ease ;
+  
+  
+  
+  border-radius: 50%;
+  border: 2px solid #4c4344;
+  cursor: pointer;
+  
+  
+  z-index: 1;
+  
+  
+  
+  
 }
 .book-btn:hover::after{
   transform: translate(-50%, -50%) scale(20);
- 
-
+  
+  
 }
 .book-btn:hover{
   
-    color: #4c4344;
-    
-    /* background-color: #fcfaf8;
-    border: 1px solid #4c4344;
-    border-radius: 10px;
-    transition: 600ms; */
-   
-   
+  color: #4c4344;
+  border: 1px solid #4c4344;
+  
+  /* background-color: #fcfaf8;
+  border: 1px solid #4c4344;
+  border-radius: 10px;
+  transition: 600ms; */
+  
+  
+  
+  
+  
+}
 
+.book-btn span i{
+  background: #F2E8E2;
+  color: #4c4344;
+  border-radius: 2rem;
+  padding: 10px;
+  font-size: 28px;
+   transition: 0.4s ease ;
+}
+.book-btn:hover i{
+  transform: rotate(-25deg);
  
-    
 }
