@@ -1,0 +1,228 @@
+@font-face {
+  font-family: "vanilla";
+  src: url("./assets/vanilla_ravioli/VanillaRavioli_Demo.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  color: #4c4344;
+  background-color: #fcfaf8;
+  font-size: 16px;
+}
+*{
+    box-sizing: border-box;
+}
+
+nav {
+    height: 64px;
+    /* margin: 0px 60px; */
+    padding: 0px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28px;
+  cursor: pointer;
+
+
+
+  
+}
+nav1 {
+  font-family: "vanilla";
+  font-weight: bolder;
+}
+.nav2 {  
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+
+
+
+
+}
+.nav2 a{
+    text-decoration: none;
+    color: #4c4344;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 20px;
+    position: relative;
+    width: max-content;
+   
+    
+}
+.nav2 a::after{
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  border-radius: 100px;
+  background-color: #4c4344;
+  bottom: 0;
+  left: 0;
+  transition: all ease 500ms;
+ 
+  
+
+}
+.nav2 a:hover::after{
+
+width: 100%;
+
+  
+
+}
+
+nav3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  
+   
+
+}
+nav3 h4{
+    font-weight: lighter;
+    font-size: 20px;
+
+}
+
+
+nav4 {
+  display: none;
+}
+
+
+
+
+/* hero section */
+.hero{
+    
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 20px 60px;
+    width: 100vw;
+    overflow: hidden;
+  
+
+}.image{
+    width: 600px;
+    height: 700px;
+    background-color:#F2E8E2;
+    border-radius: 50%;
+    transform: rotate(20deg) ;
+    /* border: 1px solid #4c4344; */
+    overflow: hidden;
+}
+
+.hero .image img{
+   height: 100%;
+   width: 100%;
+   transform: rotate(-15deg) scale(1);
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+.text{
+    width: 58%;
+     position: relative;
+     padding: 0px;
+}
+.hero .text h1
+{
+    font-family: 'vanilla';
+    font-size: 124px;
+}
+.hero .text p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #4c4344a4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    padding-right: 160px;
+}
+
+.book-btn {
+    font-size: 20px;
+    margin-top: 60px;
+    display: inline-block;
+    background-color: #4c4344;
+    color: #fcfaf8;
+    padding: 24px;
+     /* border: 1px solid #fcfaf8; */
+   border-radius: 10px;
+   cursor: pointer;
+   position: relative;
+   width: max-content;
+   overflow: hidden;
+   
+    transition: color 500ms ease;
+
+  
+}
+.book-btn span{
+  position: relative;
+  z-index: 2;
+   transition: color 500ms ease;
+}
+.book-btn::after{
+  content: '';
+  position: absolute;
+  background-color: #F2E8E2 ;
+  height: 20px ;
+  width: 20px;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%) scale(0);
+  transition: 1000ms ;
+ 
+
+
+   border-radius: 50%;
+   border: 2px solid #4c4344;
+   cursor: pointer;
+ 
+ 
+   z-index: 1;
+
+
+    
+
+}
+.book-btn:hover::after{
+  transform: translate(-50%, -50%) scale(20);
+ 
+
+}
+.book-btn:hover{
+  
+    color: #4c4344;
+    
+    /* background-color: #fcfaf8;
+    border: 1px solid #4c4344;
+    border-radius: 10px;
+    transition: 600ms; */
+   
+   
+
+ 
+    
+}
