@@ -23,9 +23,17 @@ body {
   color: #4c4344;
   background-color: #fcfaf8;
   font-size: 16px;
+
+
+
+
+  
 }
 *{
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
 }
 
 nav {
@@ -37,11 +45,40 @@ nav {
   justify-content: space-between;
   font-size: 28px;
   cursor: pointer;
+ 
+/* position: relative ; */
+
+
+position: sticky;
+z-index: 1000;
+top: 0;
+backdrop-filter: blur(10px);
+
+
+
 
 
 
   
 }
+
+nav::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: .5px;
+  width: 100%;
+
+
+  background-color: #4c4344;
+  border-radius: 100px;
+
+}
+
+
+
+
 nav1 {
   font-family: "vanilla";
   font-weight: bolder;
@@ -100,9 +137,10 @@ nav3 {
 }
 nav3 h4{
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 24px;
 
 }
+
 
 
 nav4 {
@@ -119,11 +157,26 @@ nav4 {
     align-items:flex-start;
     justify-content: space-between;
     padding: 20px 60px;
-    width: 100vw;
+    /* width: 100vw; */
     overflow: hidden;
-  
+    position: relative;
 
-}.image{
+
+}
+.hero::after{
+   content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+
+
+ background: #4c4344;
+  border-radius: 100px;
+}
+
+.image{
     width: 600px;
     height: 700px;
     /* background-color:#F2E8E2; */
@@ -146,6 +199,7 @@ nav4 {
     width: 58%;
      position: relative;
      padding: 0px;
+     margin-top: 80px;
 }
 .hero .text h1
 {
@@ -159,6 +213,7 @@ nav4 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     padding-right: 160px;
+    margin-top: 40px;
 }
 
 .book-btn {
@@ -248,3 +303,74 @@ nav4 {
   transform: rotate(-25deg);
  
 }
+
+
+
+
+
+
+ 
+.about{
+  color: #4c4344;
+  position: relative;
+  padding: 20px 60px;
+  display: flex;
+ 
+}
+.about::after{
+
+    content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: .5px;
+  width: 100%;
+
+
+  background: #4c4344;
+  border-radius: 100px;
+}
+
+
+.about .card{
+  border: #4c4344  1px solid ;
+  /* border-radius: 20px; */
+  background: linear-gradient(to left, #4c43448f , #F6F2EF 20%);
+  height: 500px;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 250px;
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+  width: 100%;
+}
+
+.card .aboutimage img{
+  height: 450px;
+  
+  
+  object-fit: cover;
+  transform: scale(1.1);
+  z-index: -1;
+
+  /* width: 300px; */
+} 
+.abouttext h1{
+  font-family: 'vanilla';
+  font-weight: bold;
+  font-size: 100px;
+  width: 10ch;
+  margin-bottom: 30px;
+  text-align: start;
+}
+.abouttext p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #4c4344c0;
+  width: 65ch;
+}
+
+
